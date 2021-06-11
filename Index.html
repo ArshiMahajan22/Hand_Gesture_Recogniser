@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Hand Gesture Identifier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h1 class="btn btn-info heading">Hand Gesture Identifier
+        <br>
+        <span>&#128406;</span>
+        <span>&#9996;</span>
+        <span>&#9995;</span>
+        <span>&#128072;</span>
+        <span>&#128400;</span>
+        <span>&#128405;</span>
+      </h1>
+
+      <br><br>
+
+      <p style="font-size: 22px;">Take Selfie of the Gesture to know the Meaning
+      	<br>
+        We Identify the Jestures
+        <hr>
+        Victory &#9996;
+        <hr>
+        Hi &#9995;
+        <hr>
+        Go &#129305;
+        <hr>
+        Sure &#128072;
+        <hr>
+        Super &#128077;
+        <hr>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Camera - </label>
+        <div id="Cam"></div>
+        <br><br>
+        <button onclick="TakePic();" class="bt btn-warning">Take Your Picture</button>
+      </div>
+      
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label style="font-size: large;" class="predictions">Prediction 1</label>
+        <p class="gesture_name" id="result_gesture_name"></p>
+        <p class="gesture" id="update_gesture"></p>
+
+        <label style="font-size: large;" class="predictions">Prediction 2</label>
+        <p class="gesture_name" id="result_gesture_name2"></p>
+        <p class="gesture" id="update_gesture2"></p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="Snap"></div>
+        <br><br>
+        <button onclick="Check();" class="btn btn-success">Identify Gesture</button>
+      </div>
+
+    </center>
+
+  </div>
+
+  <script src="Main.js"></script>
+
+  </body>
+</html>
+
+ 

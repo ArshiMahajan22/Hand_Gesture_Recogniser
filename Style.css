@@ -1,0 +1,39 @@
+body
+{
+  color: white;
+  background: #ffb3cd;
+}
+span
+{
+  font-size: 40px;
+}
+#camera , #result
+{
+  border: 2px dashed black;
+  width: 350px;
+  height: 300px; 
+}
+#result_gesture_name ,#result_gesture_name2  
+{
+  color: black;
+}
+.gesture_name
+{
+  font-size: 30px;
+}
+.gesture
+{
+  font-size:48px;
+}
+.heading
+{
+  font-size: 40px;
+  border-radius: 10px;
+  letter-spacing: 5px;
+}
+.predictions
+{
+  background-color: blue;
+  border-radius: 10px;
+  padding: 5px;
+}
