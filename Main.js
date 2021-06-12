@@ -53,22 +53,22 @@ function gotResult(error, results){
             document.getElementById("update_gesture").innerHTML = '<span>&#9996;</span>';
             speak_word1 = "Victory";
         }
-        else if(Prediction1 == "Hi"){
+        if(Prediction1 == "Hi"){
             document.getElementById("result_gesture_name").innerHTML = "Hi";
             document.getElementById("update_gesture").innerHTML = '<span>&#9995;</span>';
             speak_word1 = "Hi";
         }
-        else if(Prediction1 == "Go"){
+        if(Prediction1 == "Go"){
             document.getElementById("result_gesture_name").innerHTML = "Go";
             document.getElementById("update_gesture").innerHTML = '<span>&#129305;</span>';
             speak_word1 = "Go";
         }
-        else if(Prediction1 == "Sure"){
+        if(Prediction1 == "Sure"){
             document.getElementById("result_gesture_name").innerHTML = "Sure";
             document.getElementById("update_gesture").innerHTML = '<span>&#128072;</span>';
             speak_word1 = "Sure";
         }
-        else{
+        if(Prediction1 == "Super"){
             document.getElementById("result_gesture_name").innerHTML = "Super";
             document.getElementById("update_gesture").innerHTML = '<span>&#128077;</span>';
             speak_word1 = "Super";
