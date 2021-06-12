@@ -1,7 +1,5 @@
 var Prediction1 = "";
 var Prediction2 = "";
-var speak_word1 = "";
-var speak_word2 = "";
 
 Webcam.set({
     width: 350,
@@ -28,7 +26,7 @@ function ModelLoaded(){
 
 function speak(){
     Synth = window.speechSynthesis;
-    Speak_Data = "The First Prediction is " + speak_word1 + " and the second prediction is " + speak_word2;
+    Speak_Data = "The First Prediction is " + Prediction2 + " and the second prediction is " + Prediction1;
     console.log(Speak_Data);
     var Utter_This = new SpeechSynthesisUtterance(Speak_Data);
     Synth.speak(Utter_This);
@@ -51,53 +49,47 @@ function gotResult(error, results){
         if(Prediction1 == "Victory"){
             document.getElementById("result_gesture_name").innerHTML = "Victory";
             document.getElementById("update_gesture").innerHTML = '<span>&#9996;</span>';
-            speak_word1 = "Victory";
         }
-        else if(Prediction1 == "Hi"){
+        if(Prediction1 == "Hi"){
             document.getElementById("result_gesture_name").innerHTML = "Hi";
             document.getElementById("update_gesture").innerHTML = '<span>&#9995;</span>';
-            speak_word1 = "Hi";
         }
-        else if(Prediction1 == "Go"){
+        if(Prediction1 == "Go"){
             document.getElementById("result_gesture_name").innerHTML = "Go";
             document.getElementById("update_gesture").innerHTML = '<span>&#129305;</span>';
-            speak_word1 = "Go";
         }
-        else if(Prediction1 == "Sure"){
+        if(Prediction1 == "Sure"){
             document.getElementById("result_gesture_name").innerHTML = "Sure";
             document.getElementById("update_gesture").innerHTML = '<span>&#128072;</span>';
-            speak_word1 = "Sure";
         }
-        else{
+        if(Prediction1 == "Super"){
             document.getElementById("result_gesture_name").innerHTML = "Super";
             document.getElementById("update_gesture").innerHTML = '<span>&#128077;</span>';
-            speak_word1 = "Super";
         }
 
+        
         if(Prediction2 == "Victory"){
             document.getElementById("result_gesture_name2").innerHTML = "Victory";
             document.getElementById("update_gesture2").innerHTML = '<span>&#9996;</span>';
-            speak_word2 = "Victory";
+
         }
-        else if(Prediction2 == "Hi"){
+        if(Prediction2 == "Hi"){
             document.getElementById("result_gesture_name2").innerHTML = "Hi";
             document.getElementById("update_gesture2").innerHTML = '<span>&#9995;</span>';
-            speak_word2 = "Hi";
         }
-        else if(Prediction2 == "Go"){
+        if(Prediction2 == "Go"){
             document.getElementById("result_gesture_name2").innerHTML = "Go";
             document.getElementById("update_gesture2").innerHTML = '<span>&#129305;</span>';
-            speak_word2 = "Go";
+
         }
-        else if(Prediction2 == "Sure"){
+        if(Prediction2 == "Sure"){
             document.getElementById("result_gesture_name2").innerHTML = "Sure";
             document.getElementById("update_gesture2").innerHTML = '<span>&#128072;</span>';
-            speak_word2 = "Sure";
+
         }
-        else if(Prediction2 == "Super"){
+        if(Prediction2 == "Super"){
             document.getElementById("result_gesture_name2").innerHTML = "Super";
             document.getElementById("update_gesture2").innerHTML = '<span>&#128077;</span>';
-            speak_word2 = "Super";
         }
         speak();
     }
