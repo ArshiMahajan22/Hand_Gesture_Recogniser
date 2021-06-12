@@ -53,22 +53,22 @@ function gotResult(error, results){
             document.getElementById("update_gesture").innerHTML = '<span>&#9996;</span>';
             speak_word1 = "Victory";
         }
-        if(Prediction1 == "Hi"){
+        else if(Prediction1 == "Hi"){
             document.getElementById("result_gesture_name").innerHTML = "Hi";
             document.getElementById("update_gesture").innerHTML = '<span>&#9995;</span>';
             speak_word1 = "Hi";
         }
-        if(Prediction1 == "Go"){
+        else if(Prediction1 == "Go"){
             document.getElementById("result_gesture_name").innerHTML = "Go";
             document.getElementById("update_gesture").innerHTML = '<span>&#129305;</span>';
             speak_word1 = "Go";
         }
-        if(Prediction1 == "Sure"){
+        else if(Prediction1 == "Sure"){
             document.getElementById("result_gesture_name").innerHTML = "Sure";
             document.getElementById("update_gesture").innerHTML = '<span>&#128072;</span>';
             speak_word1 = "Sure";
         }
-        if(Prediction1 == "Super"){
+        else{
             document.getElementById("result_gesture_name").innerHTML = "Super";
             document.getElementById("update_gesture").innerHTML = '<span>&#128077;</span>';
             speak_word1 = "Super";
@@ -94,7 +94,7 @@ function gotResult(error, results){
             document.getElementById("update_gesture2").innerHTML = '<span>&#128072;</span>';
             speak_word2 = "Sure";
         }
-        else if(Prediction2 == "Bored"){
+        else if(Prediction2 == "Super"){
             document.getElementById("result_gesture_name2").innerHTML = "Super";
             document.getElementById("update_gesture2").innerHTML = '<span>&#128077;</span>';
             speak_word2 = "Super";
