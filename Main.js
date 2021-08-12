@@ -24,14 +24,6 @@ function ModelLoaded(){
     console.log("Model Loaded");
 }
 
-function speak(){
-    Synth = window.speechSynthesis;
-    Speak_Data = "The First Prediction is " + Prediction1 + " and the second prediction is " + Prediction2;
-    console.log(Speak_Data);
-    var Utter_This = new SpeechSynthesisUtterance(Speak_Data);
-    Synth.speak(Utter_This);
-}
-
 function Check(){
     Img = document.getElementById("Snapshot");
     classifier.classify(Img, gotResult);
@@ -93,4 +85,12 @@ function gotResult(error, results){
         }
         speak();
     }
+}
+
+function speak(){
+    Synth = window.speechSynthesis;
+    Speak_Data = "The First Prediction is " + Prediction1 + " and the second prediction is " + Prediction2;
+    console.log(Speak_Data);
+    var Utter_This = new SpeechSynthesisUtterance(Speak_Data);
+    Synth.speak(Utter_This);
 }
