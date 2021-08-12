@@ -26,7 +26,7 @@ function ModelLoaded(){
 
 function speak(){
     Synth = window.speechSynthesis;
-    Speak_Data = "The First Prediction is " + Prediction2 + " and the second prediction is " + Prediction1;
+    Speak_Data = "The First Prediction is " + Prediction1 + " and the second prediction is " + Prediction2;
     console.log(Speak_Data);
     var Utter_This = new SpeechSynthesisUtterance(Speak_Data);
     Synth.speak(Utter_This);
